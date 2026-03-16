@@ -15,7 +15,9 @@ public class Interfaccia2 extends javax.swing.JFrame {
     /**
      * Creates new form Interfaccia2
      */
+    
     public Interfaccia2() {
+        setTitle("Scelta Personaggio");
         initComponents();
     }
 
@@ -34,11 +36,11 @@ public class Interfaccia2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 501, Short.MAX_VALUE)
         );
 
         pack();

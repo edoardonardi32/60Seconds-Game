@@ -9,29 +9,49 @@ package pkg60seconds.game;
  * @author nardi
  */
 public class StatoPersonaggio {
-
+    Personaggio p;
     public StatoPersonaggio(Personaggio personaggio) {
+        p = personaggio;
     }
 
-    public void bevi() {
+    public String bevi(int bottiglieDiAcqua) {
+        if(bottiglieDiAcqua>0){
+            bottiglieDiAcqua--;
+            return "Ha bevuto,ne aveva proprio bisogno";
+        }
+        else{
+        return "Non hai acqua";
+        }
     }
 
-    public void mangia() {
+    public String mangia(int scatoleDiCibo) {
+         if(scatoleDiCibo>0){
+            scatoleDiCibo--;
+            return "ha mangiato,ne aveva proprio bisogno";
+        }
+        else{
+        return "Non hai cibo";
+        }
     }
 
     public void ammalati() {
     }
 
     public void guarisci() {
+    
+    
     }
 
     public void perdiSanitaMentale() {
+        p.setSaluteMentale(-20);
     }
 
     public void recuperaSanitaMentale() {
+        p.setSaluteMentale(100);
     }
 
     public void muori() {
+        
     }
 
     public boolean isVivo() {

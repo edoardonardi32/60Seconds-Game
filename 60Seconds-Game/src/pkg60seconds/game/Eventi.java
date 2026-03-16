@@ -51,7 +51,7 @@ public class Eventi {
     public void statoCritico() {
     }
 
-    public void ascoltaRadio() {
+    public void ascoltaRadio()  {
     }
 
     public void riparaRadio() {

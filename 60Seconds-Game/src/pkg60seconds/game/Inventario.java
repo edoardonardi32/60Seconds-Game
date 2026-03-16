@@ -48,19 +48,22 @@ public class Inventario {
     public void setScatoleDiCibo(int scatoleDiCibo) { this.scatoleDiCibo = scatoleDiCibo; }
     public void setBottiglieDiAcqua(int bottiglieDiAcqua) { this.bottiglieDiAcqua = bottiglieDiAcqua; }
     
-    public void usaOggetto() {
+    public void usaOggetto(boolean oggetto) {
+        double casuale = Math.random(); 
+    
+    if (casuale < 0.6) {
+        System.out.println("L'oggetto funziona correttamente!");
+    } else {
+        System.out.println("L'oggetto si è rotto!");
+        oggetto = false;
+    }
+    }
+    public void rompiOggetto(boolean oggetto) {
+        oggetto = false;
     }
 
-    public void aggiungiOggetto() {
-    }
-
-    public void rimuoviOggetto() {
-    }
-
-    public void rompiOggetto() {
-    }
-
-    public void riparaOggetto() {
+    public void riparaOggetto(boolean oggetto) {
+        oggetto= true;
     }
     
 }

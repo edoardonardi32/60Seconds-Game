@@ -48,16 +48,18 @@ public class Interfaccia extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, 290, 70));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 290, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkg60seconds/game/ImmagineSfondo.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 890, 560));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 890, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        Interfaccia2 i2 = new Interfaccia2();
+        i2.setVisible(true);
+        this.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

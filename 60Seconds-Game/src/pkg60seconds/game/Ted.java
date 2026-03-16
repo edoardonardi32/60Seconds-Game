@@ -17,5 +17,6 @@ public class Ted extends Personaggio {
         inventario.setAscia(true);
         inventario.setScatoleDiCibo(6);
         inventario.setBottiglieDiAcqua(5);
+        this.setSaluteMentale(saluteMentale);
     }
 }
