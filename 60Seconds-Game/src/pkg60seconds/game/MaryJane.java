@@ -18,4 +18,8 @@ public class MaryJane extends Personaggio {
         inventario.setScatoleDiCibo(8);
         inventario.setBottiglieDiAcqua(4);
     }
+    @Override
+   public void AbilitaSpeciale(){
+       
+   }
 }

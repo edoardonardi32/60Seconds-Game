@@ -18,4 +18,8 @@ public class Dolores extends Personaggio {
         inventario.setScatoleDiCibo(4);
         inventario.setBottiglieDiAcqua(7);
     }
+        @Override
+   public void AbilitaSpeciale(){
+       
+   }
 }

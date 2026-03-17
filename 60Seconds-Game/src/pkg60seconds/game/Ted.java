@@ -19,4 +19,9 @@ public class Ted extends Personaggio {
         inventario.setBottiglieDiAcqua(5);
         this.setSaluteMentale(saluteMentale);
     }
+        @Override
+   public void AbilitaSpeciale(){
+       
+   }
+   
 }

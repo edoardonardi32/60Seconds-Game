@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package pkg60seconds.game;
-
+ 
 /**
  *
  * @author nardi
@@ -12,26 +12,102 @@ public abstract class Personaggio {
 
     protected int cibo;
     protected int acqua;
-    protected int stamina=100;
-    protected StatoPersonaggio stato;
+    protected int stamina = 100;
     protected Inventario inventario;
     protected int giorniSenzaCibo;
     protected int giorniSenzaAcqua;
-    protected int saluteMentale=100;
-    protected int salute =100;
+    protected int saluteMentale = 100;
+    protected int salute = 100;
+    protected boolean vivo = true;
 
+    
+    
+    public abstract void  AbilitaSpeciale();
     public Personaggio(Inventario inventario) {
+        this.inventario = inventario;
     }
 
+    // ===== AZIONI =====
+
+    public String bevi() {
+        if (acqua > 0) {
+            acqua--;
+            giorniSenzaAcqua = 0;
+            return "Ha bevuto, ne aveva proprio bisogno";
+        } else {
+            giorniSenzaAcqua++;
+            return "Non hai acqua";
+        }
+    }
+
+    public String mangia() {
+        if (cibo > 0) {
+            cibo--;
+            giorniSenzaCibo = 0;
+            return "Ha mangiato, ne aveva proprio bisogno";
+        } else {
+            giorniSenzaCibo++;
+            return "Non hai cibo";
+        }
+    }
+
+    public void ammalati() {
+        salute -= 20;
+        if (salute < 0) salute = 0;
+    }
+
+    public void guarisci() {
+        salute += 20;
+        if (salute > 100) salute = 100;
+    }
+
+    public void perdiSanitaMentale() {
+        saluteMentale -= 20;
+        if (saluteMentale < 0) saluteMentale = 0;
+    }
+
+    public void recuperaSanitaMentale() {
+        saluteMentale = 100;
+    }
+
+    public void muori() {
+        vivo = false;
+        salute = 0;
+    }
+
+    public boolean isVivo() {
+        return vivo;
+    }
+
+    // ===== LOGICA DI GIOCO =====
+
     public void consumaRisorse() {
+        giorniSenzaCibo++;
+        giorniSenzaAcqua++;
+
+        if (giorniSenzaCibo > 3) {
+            salute -= 10;
+        }
+
+        if (giorniSenzaAcqua > 2) {
+            salute -= 20;
+        }
+
+        if (salute <= 0) {
+            muori();
+        }
     }
 
     public void aggiornaStato() {
+        if (salute < 30) {
+            perdiSanitaMentale();
+        }
+
+        if (saluteMentale <= 0) {
+            muori();
+        }
     }
 
-    public StatoPersonaggio getStato() {
-        return null;
-    }
 
     public int getCibo() {
         return cibo;
@@ -96,5 +172,4 @@ public abstract class Personaggio {
     public void setSalute(int salute) {
         this.salute = salute;
     }
-    
 }

@@ -17,5 +17,10 @@ public class Timmy extends Personaggio {
         inventario.setCarteDaGioco(true);
         inventario.setScatoleDiCibo(6);
         inventario.setBottiglieDiAcqua(6);
-    }
+    }    
+   @Override
+   public void AbilitaSpeciale(){
+       
+   }
+    
 }

@@ -10,6 +10,7 @@ package pkg60seconds.game;
  */
 public class Eventi {
 
+    Personaggio M = new MaryJane();
     public String generaInfestazione() {
         String[] messaggi = {
         "Oh no! La cucina è invasa dagli scarafaggi!",
@@ -36,60 +37,113 @@ public class Eventi {
     return messaggi[indice];
     }
 
-    public void perditaScorte() {
-    }
+  public String guadagnoScorte() {
+    M.cibo += (int)(Math.random() * 4) + 2;
+    M.acqua += (int)(Math.random() * 4) + 2;
 
-    public void guadagnoScorte() {
-    }
+    return "Hai trovato scorte!";
+}
 
-    public void usaKitMedico() {
-    }
+public String usaKitMedico() {
+    M.salute = Math.min(100, M.salute + ((int)(Math.random() * 25) + 15));
+    return "Hai usato un kit medico";
+}
 
-    public void peggioraMalattia() {
-    }
+public String peggioraMalattia() {
+    M.salute = Math.max(0, M.salute - ((int)(Math.random() * 10) + 5));
+    return "La malattia peggiora";
+}
 
-    public void statoCritico() {
-    }
+public String statoCritico() {
+    M.saluteMentale = Math.max(0, M.saluteMentale - ((int)(Math.random() * 10) + 5));
+    return "Sei sotto stress";
+}
 
-    public void ascoltaRadio()  {
-    }
+public String ascoltaRadio() {
+    String[] messaggi = {
+        "Segnale debole...",
+        "Voce alla radio!",
+        "Solo rumore...",
+        "Niente oggi"
+    };
 
-    public void riparaRadio() {
-    }
+    return messaggi[(int)(Math.random() * messaggi.length)];
+}
 
-    public void inviaSegnale() {
-    }
+public String riparaRadio() {
+    return (Math.random() < 0.6) ?
+        "Radio riparata!" :
+        "Non funziona ancora...";
+}
 
-    public void bussanoAllaPorta() {
-    }
+public String inviaSegnale() {
+    return (Math.random() < 0.7) ?
+        "Segnale inviato!" :
+        "Nessuna risposta...";
+}
 
-    public void apriPorta() {
-    }
+public String bussanoAllaPorta() {
+    String[] eventi = {
+        "Qualcuno bussa...",
+        "Colpi alla porta!",
+        "Una voce fuori...",
+        "Rumori strani..."
+    };
 
-    public void effettuaScambio() {
-    }
+    return eventi[(int)(Math.random() * eventi.length)];
+}
 
-    public void subisciFurto() {
-    }
+public String apriPorta() {
+    double r = Math.random();
 
-    public void ignoraPorta() {
-    }
+    if (r < 0.5) return guadagnoScorte();
+    if (r < 0.85) return effettuaScambio();
+    return subisciFurto();
+}
 
-    public void riceviSegnale() {
-    }
+public String effettuaScambio() {
+    M.cibo = Math.max(0, M.cibo - 1);
+    M.acqua += (int)(Math.random() * 3) + 2;
 
-    public void controllaCondizioneVittoria() {
-    }
+    return "Scambio fatto";
+}
 
-    public void attivaFinaleSalvataggio() {
-    }
+public String subisciFurto() {
+    M.cibo = Math.max(0, M.cibo - ((int)(Math.random() * 2) + 1));
+    return "Hai subito un furto";
+}
 
-    public void attivaFinaleFollia() {
-    }
+public String ignoraPorta() {
+    return "Hai ignorato la porta";
+}
 
-    public void attivaFinaleMorte() {
-    }
+public String riceviSegnale() {
+    return (Math.random() < 0.6) ?
+        "Segnale ricevuto!" :
+        "Niente risposta";
+}
 
-    public void attivaFinaleSopravvivenzaLunga() {
-    }
+public String controllaCondizioneVittoria() {
+    if (M.salute <= 0) return attivaFinaleMorte();
+    if (M.saluteMentale <= 0) return attivaFinaleFollia();
+    if (Math.random() > 0.9) return attivaFinaleSalvataggio();
+
+    return "Sopravvivi...";
+}
+
+public String attivaFinaleSalvataggio() {
+    return "Sei stato salvato!";
+}
+
+public String attivaFinaleFollia() {
+    return "Sei impazzito!";
+}
+
+public String attivaFinaleMorte() {
+    return "Sei morto!";
+}
+
+public String attivaFinaleSopravvivenzaLunga() {
+    return "Hai resistito a lungo!";
+}
 }
