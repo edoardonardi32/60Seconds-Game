@@ -20,7 +20,7 @@ public class Timmy extends Personaggio {
     }    
    @Override
    public void AbilitaSpeciale(){
-       
+       inventario.setLucchetto(true);
    }
     
 }

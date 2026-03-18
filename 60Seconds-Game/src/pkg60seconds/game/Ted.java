@@ -21,7 +21,7 @@ public class Ted extends Personaggio {
     }
         @Override
    public void AbilitaSpeciale(){
-       
+       cibo+=5;
    }
    
 }
