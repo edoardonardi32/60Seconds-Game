@@ -4,8 +4,7 @@
  */
 package pkg60seconds.game;
 
-import java.awt.Image;
-import javax.swing.ImageIcon;
+
 
 /**
  *
@@ -24,6 +23,7 @@ public class Interfaccia extends javax.swing.JFrame {
         jButton2.setContentAreaFilled(false);
         jButton2.setBorderPainted(false);
         jButton2.setOpaque(false);
+        this.setSize(880, 550);
     }
 
     /**
@@ -59,7 +59,9 @@ public class Interfaccia extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Interfaccia2 i2 = new Interfaccia2();
         i2.setVisible(true);
-        this.setVisible(false);        // TODO add your handling code here:
+        this.setVisible(false);
+        i2.setSize(880, 550);
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -85,6 +87,7 @@ public class Interfaccia extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Interfaccia().setVisible(true));
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

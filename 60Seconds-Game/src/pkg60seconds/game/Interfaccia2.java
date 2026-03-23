@@ -4,6 +4,9 @@
  */
 package pkg60seconds.game;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 /**
  *
  * @author nardi.edoardo
@@ -19,7 +22,21 @@ public class Interfaccia2 extends javax.swing.JFrame {
     public Interfaccia2() {
         setTitle("Scelta Personaggio");
         initComponents();
+        ImageIcon icon2 = new ImageIcon("mary-jane-mutant.png");
+        ImageIcon icon3 = new ImageIcon("DoloresFoto.png");
+        ImageIcon icon4 = new ImageIcon("ted-ted-mcdoodle.png");
+        ImageIcon icon5 = new ImageIcon("timmy-mcdoodle.png");
+
+        // Assegna immagini ai bottoni
+        jButton2.setIcon(icon2);
+        jButton3.setIcon(icon3);
+        jButton4.setIcon(icon4);
+        jButton5.setIcon(icon5);
     }
+
+   
+                
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,18 +47,25 @@ public class Interfaccia2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 501, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton2.setText("jButton1");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, 180, 360));
+
+        jButton3.setText("jButton1");
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 180, 360));
+
+        jButton4.setText("jButton1");
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 180, 360));
+
+        jButton5.setText("jButton1");
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 180, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -72,5 +96,9 @@ public class Interfaccia2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     // End of variables declaration//GEN-END:variables
 }

@@ -79,7 +79,7 @@ public abstract class Personaggio {
         return vivo;
     }
 
-    // ===== LOGICA DI GIOCO =====
+    
 
     public void consumaRisorse() {
         giorniSenzaCibo++;
