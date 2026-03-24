@@ -4,6 +4,7 @@
  */
 package pkg60seconds.game;
 
+import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -19,21 +20,26 @@ public class Interfaccia2 extends javax.swing.JFrame {
      * Creates new form Interfaccia2
      */
     
-    public Interfaccia2() {
-        setTitle("Scelta Personaggio");
-        initComponents();
-        ImageIcon icon2 = new ImageIcon("mary-jane-mutant.png");
-        ImageIcon icon3 = new ImageIcon("DoloresFoto.png");
-        ImageIcon icon4 = new ImageIcon("ted-ted-mcdoodle.png");
-        ImageIcon icon5 = new ImageIcon("timmy-mcdoodle.png");
+public Interfaccia2() {
+    setTitle("Scelta Personaggio");
+    initComponents();
 
-        // Assegna immagini ai bottoni
-        jButton2.setIcon(icon2);
-        jButton3.setIcon(icon3);
-        jButton4.setIcon(icon4);
-        jButton5.setIcon(icon5);
-    }
+    setButtonIcon(jButton3, "MaryJane.png");
+    setButtonIcon(jButton4, "Dolores.png");
+    setButtonIcon(jButton1, "Ted.png");
+    setButtonIcon(jButton2, "Timmy.png");
+}
 
+private void setButtonIcon(JButton button, String path) {
+    ImageIcon icon = new ImageIcon(path);
+    Image img = icon.getImage();
+
+    int width = button.getWidth();
+    int height = button.getHeight();
+
+    Image scaledImg = img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+    button.setIcon(new ImageIcon(scaledImg));
+}
    
                 
     
@@ -47,28 +53,50 @@ public class Interfaccia2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setText("jButton1");
+        jButton1.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton1.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 240, 210));
+
         jButton2.setText("jButton1");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 50, 180, 360));
+        jButton2.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton2.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton2.setPreferredSize(new java.awt.Dimension(50, 50));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, 240, 210));
 
         jButton3.setText("jButton1");
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 180, 360));
+        jButton3.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton3.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 240, 210));
 
         jButton4.setText("jButton1");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 180, 360));
-
-        jButton5.setText("jButton1");
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 50, 180, 360));
+        jButton4.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton4.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 280, 240, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,9 +124,10 @@ public class Interfaccia2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
