@@ -23,7 +23,7 @@ public class Interfaccia extends javax.swing.JFrame {
         jButton2.setContentAreaFilled(false);
         jButton2.setBorderPainted(false);
         jButton2.setOpaque(false);
-        this.setSize(880, 550);
+        this.setSize(1000, 563);
     }
 
     /**
@@ -51,7 +51,7 @@ public class Interfaccia extends javax.swing.JFrame {
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 290, 70));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pkg60seconds/game/ImmagineSfondo.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 890, 570));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -3, 980, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -60,7 +60,7 @@ public class Interfaccia extends javax.swing.JFrame {
         Interfaccia2 i2 = new Interfaccia2();
         i2.setVisible(true);
         this.setVisible(false);
-        i2.setSize(880, 550);
+        i2.setSize(1000, 563);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
