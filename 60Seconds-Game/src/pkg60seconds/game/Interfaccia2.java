@@ -22,8 +22,8 @@ public class Interfaccia2 extends javax.swing.JFrame {
     
 public Interfaccia2() {
     setTitle("Scelta Personaggio");
+    this.setSize(1000,563);
     initComponents();
-
     setButtonIcon(jbt_maryjane, "MaryJane.png");
     setButtonIcon(jbt_dolores, "Dolores.png");
     setButtonIcon(jbt_ted, "Ted.png");
@@ -61,9 +61,7 @@ private void setButtonIcon(JButton button, String path) {
         jbt_maryjane = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 563));
         setMinimumSize(new java.awt.Dimension(1000, 563));
-        setPreferredSize(new java.awt.Dimension(1000, 563));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 48)); // NOI18N
@@ -71,19 +69,67 @@ private void setButtonIcon(JButton button, String path) {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 700, -1));
 
         jbt_ted.setText("jButton5");
-        getContentPane().add(jbt_ted, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 230, 450));
+        jbt_ted.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_tedActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbt_ted, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 90, 230, 390));
 
         jbt_dolores.setText("jButton5");
-        getContentPane().add(jbt_dolores, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 90, 230, 450));
+        jbt_dolores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_doloresActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbt_dolores, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 90, 230, 390));
 
         jbt_timmy.setText("jButton5");
-        getContentPane().add(jbt_timmy, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 230, 450));
+        jbt_timmy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_timmyActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbt_timmy, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 230, 390));
 
         jbt_maryjane.setText("jButton5");
-        getContentPane().add(jbt_maryjane, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 230, 450));
+        jbt_maryjane.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_maryjaneActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jbt_maryjane, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 230, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbt_timmyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_timmyActionPerformed
+        int m =1;
+        this.dispose();
+        Interfaccia3 i3 = new Interfaccia3();
+        i3.setVisible(true);
+    }//GEN-LAST:event_jbt_timmyActionPerformed
+
+    private void jbt_maryjaneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_maryjaneActionPerformed
+        int m =2;
+        this.dispose();
+        Interfaccia3 i3 = new Interfaccia3();
+        i3.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jbt_maryjaneActionPerformed
+
+    private void jbt_tedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_tedActionPerformed
+        int m =3;
+        this.dispose();
+        Interfaccia3 i3 = new Interfaccia3();
+        i3.setVisible(true);  
+    }//GEN-LAST:event_jbt_tedActionPerformed
+
+    private void jbt_doloresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_doloresActionPerformed
+        int m =4;
+        this.dispose();
+        Interfaccia3 i3 = new Interfaccia3();
+        i3.setVisible(true);          
+    }//GEN-LAST:event_jbt_doloresActionPerformed
 
     /**
      * @param args the command line arguments
