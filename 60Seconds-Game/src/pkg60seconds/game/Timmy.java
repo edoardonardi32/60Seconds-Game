@@ -23,4 +23,6 @@ public class Timmy extends Personaggio {
        inventario.setLucchetto(true);
    }
     
+   
+   
 }
